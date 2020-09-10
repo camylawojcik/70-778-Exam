@@ -1,0 +1,11 @@
+### Power BI
+- Composição:
+  - Power BI Desktop
+  - Power BI Service (SaaS)
+  - Mobile Power BI Apps
+- __Building Blocks__:
+  - Visualizations
+  - Datasets
+  - Reports
+  - Dashboards
+  - Tiles
