@@ -18,8 +18,17 @@ Is a collection of services, apps, and connectors that lets you connect to your 
       - A lot of pre-built __connectors__ included. 
  
     - __Reports__ is a collections of visualizations that appear together on one or more pages. 
-    - Collection of items that are related to each other
+      - Collection of items that are related to each other
     - __Dashboards__: When you share a single page from a report, or a collection of visualizations, you create a dashboard. 
       - Collection of visuals from a single page that you can share with others. 
       - Must fit in a single page. (Canvas: white backdrop in Power Bi)
-    - _Tiles__: is a single visualization on a report or a dashboard. (é cada um dos visuais).
+    - __Tiles__: is a single visualization on a report or a dashboard. (é cada um dos visuais).
+- __APP__: is a collection of preset, ready-made visuals and reports that are shared woth an entire organization. Ge you up and running quickly, with data and dashboards 
+- __Power Bi Desktop__: Is a free application for PCs that lets you gather, tranform, and visualize your data. 
+  - Ribbon - Displays common tasks that are associated with reports and visualizations.
+  - Report view, or canvas - Where visualizations are created and arranged. You can switch between Report, Data, and Model views by selecting the icons in the left column.
+  - Pages tab - Located along the bottom of the page, this area is where you would select or add a report page.
+  - Visualizations pane - Where you can change visualizations, customize colors or axes, apply filters, drag fields, and more.
+  - Fields pane - Where query elements and filters can be dragged onto the Report view or dragged to the Filters area of the Visualizations pane.
+  - If you use any of Excel's advanced BI features like Power Query, Power Pivot, or Power View, you can import that data into Power BI, too.
+  
