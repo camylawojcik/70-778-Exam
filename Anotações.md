@@ -32,3 +32,6 @@ Is a collection of services, apps, and connectors that lets you connect to your 
   - Fields pane - Where query elements and filters can be dragged onto the Report view or dragged to the Filters area of the Visualizations pane.
   - If you use any of Excel's advanced BI features like Power Query, Power Pivot, or Power View, you can import that data into Power BI, too.
   
+- __Calculated Columns__: one reason for create is to estabilish a relationship between tables when no unique filds exist. 
+- __Measure__: Are calculated as you interact with your reports and aren't stored your database.
+- __Calculated Table__: Provides intermidiate calculations and data that you want stored as part of the model rather than as part of a query. You can use calculated tables, for example, to cross join two tables. 
