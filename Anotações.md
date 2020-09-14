@@ -35,3 +35,39 @@ Is a collection of services, apps, and connectors that lets you connect to your 
 - __Calculated Columns__: one reason for create is to estabilish a relationship between tables when no unique filds exist. 
 - __Measure__: Are calculated as you interact with your reports and aren't stored your database.
 - __Calculated Table__: Provides intermidiate calculations and data that you want stored as part of the model rather than as part of a query. You can use calculated tables, for example, to cross join two tables. 
+
+- You can ensure that a dashboard will always have a collapsed navigation bar by appending the following to the end of the URL:
+  - __?collapseNavigation=true__
+- quick insights
+- __Workspaces__
+  - Classic Workpsaces: groups based onde the office 365 groups
+  - New Workspaces: the default workspace in power bi. Assign security groups, distribution lists, Microsoft 365 groups and individuals.
+    - Create a workspace in Power Bi without creating office 365 group
+    Use more granular workspaces roles for more flexible permissions management in a workspace
+    - The Power BI Admin can control who can create workspaces in Power BI. 
+  - Relatorios para embed: ficam publicos na internet
+- __Gateway__
+  - The cloud service creates a query and the encrypted credentials fro the on-premises data source. The query and credentials are sent to the gateway queue for processing;
+  - The gateway cloud service analyzes the query and pushes the request to Azre Service Bus
+  - Azure Service Bus sends the pending requests to the gateway 
+  - The gateway gets the query, decrypts the credentials, and connects to one or more data sources with those credentials;
+  - The gateway sends the query to the data source to be run;
+  - The results are sent from data source back to the gateway and then to the cloud service. The service uses the results. 
+  - Power BI Pro: 8 x por dia (Capacidade compartilhada) 48 x por dia (Premium)
+  - As Atualizações automaticas são desativadas após 4 falhas ou após detectar um erro irrecuperável.
+  - __Incremental Refresh__
+    - Refreshs are faster - only the data that needs to be changed gets refreshed.
+    - You no longer need to keep your onnections to long-running data connections open to schedule a refresh.
+    - Resource Consumption is reduced 
+    - __How It works__
+      - Define Filter Parameters: RangeStart and RangeEnd (Home > Manage Parameters | Type Data/Time, Suggested Value: Any Value | Current Value: The date on which you want to begin the import)
+      - (Power Query Editor) Go to the applicable column, the ight-click that column and select Custom Filter. 
+      - There is one option to Detect data changes and you can select a data/time column used to identify and refresh only the days where the data has changed.
+      - There is one option where is possible refresh only complete periods.
+- __Endorse your Datasets__
+  - Promotion: promote ypur datasets when they're ready for wide-spread usage. Any workspace member with Write permissions can promote your datasets.
+  - Certification: Request certification for a promoted dataset from admin user that is defined in the Dataset Certification tenant admin setting. This adds an additional layer of security for your datasets. Crtification can be a highly selective process, on only the truly realiable and authoritative datasets are used accross the organization.
+- __Power Bi query caching (Premium or Embedded)__
+    - The query results are only specific to a user, and you cand only use query caching on a specific page of a report
+    - It's allows for usage dedicated capacity and NOT on the dataset itself
+  
