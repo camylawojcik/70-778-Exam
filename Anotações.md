@@ -70,4 +70,32 @@ Is a collection of services, apps, and connectors that lets you connect to your 
 - __Power Bi query caching (Premium or Embedded)__
     - The query results are only specific to a user, and you cand only use query caching on a specific page of a report
     - It's allows for usage dedicated capacity and NOT on the dataset itself
-  
+- __Workspaces__
+  - Administrador
+  - Membro: Faz tudo que o adm faz, mas não pode adicionar/remover usuários
+    - Não é possível remover o workspace e nem atualizar os metadados;
+  - Colaborador: 
+    - Não pode adicionar/remover usuários
+    - Não pode publciar, atualizar nem editar um aplicativo em um workspace, a menos que tenha recebido essa capacidade de administradores/membros;
+    - Pode criar, atualizar e publicar conteúdo e relatórios em um novo workspace; 
+    - Pode agendar atualizações de dados;
+  - Visualizador:
+    - Não pode adicionar nem remover usuários;
+    - Só pode exibir um relatório ou dashboard em um workspace
+    - Pode ler dados armazenados em fluxos de dados do workspace;
+- Pipeline de Implantação (Pbi Premium)
+  - É um recurso que gerencia o conteúdo em dashboards, relatórios e conjuntos de dados entre ambientes diferentes no ciclo de vida de desenvolvimento. Aqui você pode desenvolver e testar o conteúdo do Power Bi em uma localização centralizada e simplificar o processo antes de implantar o conteúdp final para os usuários finais. 
+    - Maior produtividade: você pode reutilizar pipelines de implantação;
+    - Entrega mais rápida de conteúdo: dev. simplificado
+    - Menor Intervenção Humana necessária e menor chance de erro (devido a reutilização)
+  - Ambientes: (Você pode decidir quais incluir, conforme sua necessidade)
+    - Desenvolvimento
+    - Testar
+    - Produção
+- __Power Bi's Lineage View__ In Lineage View you can quickly refresh datasets and see the relationships betwenn the artifacts in a workspace as well as their external dependencies. 
+  - Only accessible to admin, contributor, and member roles. 
+  - Possivel notificar os usuários impactados
+  - Possível visualizar os reports e o numero de usuários
+- __Sensitivity Labels__
+  Specify which data can be exported. These labels are configured externally to Power Bi, and Power Bi allows you to quickly and easily use them in your reports and dashboards. These labels allows you to define and protect content, even outside of Power Bi. 
+  - None, Personal, General, Confidential and Highly Confidential 
