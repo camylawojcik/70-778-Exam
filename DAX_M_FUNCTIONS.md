@@ -23,7 +23,14 @@
   - __PREVIOUSMONTH__:
   - __PREVIOUSYEAR()__: 
   - __PARALLELPERIOD():__ Desloca mêses/anos/dias para trás de cada data no contexto do filtro
-
+  - __DATESYTD__:CALCULATE (
+                  SUM ( Vendas[Total Venda] );
+                    FILTER (
+                        ALL ( CalendarioDAX[Date] );
+                        CalendarioDAX[Date] <= MAX ( CalendarioDAX[Date] )
+                            && YEAR ( CalendarioDAX[Date] ) = YEAR ( MAX ( CalendarioDAX[Date] ) )
+                    )
+                )
  
  ### M Language
   - Table.distinct:
