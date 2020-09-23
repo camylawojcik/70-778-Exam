@@ -15,4 +15,13 @@
   - Otimizado para exibir os dados rapidamente;
   - A latência é menor pois não é necessário salvar o dado ou lê-lo de um banco;
   - Indicado para situações onde o tempo para visualizar os dados é critico;
-- Boa Prática: carregar o dado no formato que ele será visualizado, sem agregações adicionais;
+- __Boa Prática:__ carregar o dado no formato que ele será visualizado, sem agregações adicionais;
+
+#### PubNub Streaming Dataset
+- PBI web client uses the PubNub SDK to read an existing PubNub data stream;
+- No data is stored by the Power Bi service
+- Call is made from the web client directly
+- List traffic to PubNub as allowed from your network;
+- There's no underlying database (as streaming datasets)
+- Os dados só podem ser visualizados através de blocos(tiles) em dashboards;
+- Tem as mesmas limitações do Streaming Datasets e também é indicado quando é necessário baixa latência na visualização dos dados;
