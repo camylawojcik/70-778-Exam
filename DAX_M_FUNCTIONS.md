@@ -23,7 +23,7 @@
   - __PREVIOUSMONTH__:
   - __PREVIOUSYEAR()__: 
   - __PARALLELPERIOD():__ Desloca mêses/anos/dias para trás de cada data no contexto do filtro
-  - __DATESYTD__:CALCULATE (
+  - __DATESYTD__:CALCULATE ( 
                   SUM ( Vendas[Total Venda] );
                     FILTER (
                         ALL ( CalendarioDAX[Date] );
