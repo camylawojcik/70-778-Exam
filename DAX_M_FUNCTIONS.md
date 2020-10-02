@@ -52,7 +52,7 @@
    ```
   Text.Replace(the quick brown fox jumps over the lazy dog, the, a)
    ```
-  - __Table.ReplaceMatchingRows__Substitui todas as linhas especificadas na table pelas linhas fornecidas. As linhas a serem substituídas e as substituições são especificadas em replacements, usando a formatação {old, new}. 
+  - __Table.ReplaceMatchingRows__ Substitui todas as linhas especificadas na table pelas linhas fornecidas. As linhas a serem substituídas e as substituições são especificadas em replacements, usando a formatação {old, new}. 
   ```
     Table.ReplaceMatchingRows(
     Table.FromRecords({
@@ -67,7 +67,7 @@
     }
 )
   ```
-  - __Table.RenameColumns__
+  - __Table.RenameColumns__: Executa os renomeações fornecidas para as colunas na tabela table. Uma operação de substituição renames consiste em uma lista de dois valores, o nome de coluna antigo e o novo, fornecidos em uma lista.
   - Replaced Errors = 
   ```Table.ReplaceErrorValues(#"Changed Type", {{"Customer Key", 0}}) in #"Replaced Errors"
   ```
