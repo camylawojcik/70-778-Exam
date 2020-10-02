@@ -1,20 +1,19 @@
 ### DAX Functions
   - __CALCULATE__: apenas UM filtro é aceito como argumento;
   - __FORMAT__: FORMAT([Date], "MMMM DD, YYYY") >  December 01, 2014.
-
   - __RANK__: RANKX(ALL('Product'), [SalesAmount], DESC, Dense)
     - _Dense:_ Em caso de empate na posição do ranking, todos empatados serão considerados dentro de uma posição só;
     - _Skip:_ Em caso de empate, as posições ocupadas pelos registros empatados serão todas ocupadas;
   - __ALLSELECTED__: Remove filtros de contexto de colunas e linhas na consulta atual, mantendo todos os outros filtros de contexto ou filtros explícitos. 
- - __SAMEPERIODLASTYEAR()__:
- - __DATEADD()__:
- - __TOPN()__:
- - __REMOVEFILTERS()__:
- - __FILTER__:
- - __KEEPFILTER__
- - __DIVIDE()__
- - __ISINSCOPE():__ usada para testar se uma coluna é o nível em uma hierarquia de niveis
- - __COUNTAX__: O exemplo a seguir conta o número de linhas que não estão em branco na coluna Phone usando a tabela resultante da filtragem da tabela Reseller em [Status] = Active.
+  - __TOPN()__: TOPN(<10>, <table>, <FUNÇÃO USADA PARA ORDENAR OS VALORES>)
+  - __REMOVEFILTERS()__: Remove filtros de tabela ou coluna
+  - __FILTER__: FILTER(TABELA, expressão booleana)
+  - __ALLCROSSFILTERED(<table>)__: remove todos os filtros da tabela
+  - __KEEPFILTER__
+  - __DIVIDE()__
+  - __ISINSCOPE():__ usada para testar se uma coluna é o nível em uma hierarquia de niveis
+  - __CONTAINS__(<table>, <columnName>, <value>[, <columnName>, <value>]…)
+  - __COUNTAX__: O exemplo a seguir conta o número de linhas que não estão em branco na coluna Phone usando a tabela resultante da filtragem da tabela Reseller em [Status] = Active.
   - =COUNTAX(FILTER('Reseller',[Status]="Active"),[Phone])
  -__COUNTA__: A função COUNTA conta o número de células de uma coluna que não estão vazias.
   - COUNTA(COLUMN)
@@ -38,7 +37,8 @@
                             && YEAR ( CalendarioDAX[Date] ) = YEAR ( MAX ( CalendarioDAX[Date] ) )
                     )
                 )
- 
+ - __SAMEPERIODLASTYEAR()__:mesmo periodo no ultimo ano.Parâmetro: DATA
+ - __DATEADD()__: DATEADD(<dates>,<1, 2, 3>,<DIA, MES, ANO>)  
  ### M Language
   - Table.distinct:
   - Table.replace
