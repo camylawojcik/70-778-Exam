@@ -12,13 +12,12 @@
   - __KEEPFILTER__
   - __DIVIDE()__
   - __ISINSCOPE():__ usada para testar se uma coluna é o nível em uma hierarquia de niveis
-  - __CONTAINS__(<table>, <columnName>, <value>[, <columnName>, <value>]…)
+  - __CONTAINS__(table, columnName, value[, columnName, value]…)
   - __COUNTAX__: O exemplo a seguir conta o número de linhas que não estão em branco na coluna Phone usando a tabela resultante da filtragem da tabela 
   ```
   Reseller em [Status] = Active- =COUNTAX(FILTER('Reseller',[Status]="Active"),[Phone])
   ```
-  - __COUNTA__: A função COUNTA conta o número de células de uma coluna que não estão vazias.
-  - COUNTA(COLUMN)
+  - __COUNTA__: A função COUNTA conta o número de células de uma coluna que não estão vazias COUNTA(COLUMN)
   - __COUNTX(table,expression):__ Conta o número de linhas que contêm um valor que não esteja em branco ou uma expressão que é avaliada como um valor que não esteja em branco, ao avaliar uma expressão em uma tabela. Não trabalha com expressões booleanas. 
   - __COUNTROWS(table):__ A função COUNTROWS conta o número de linhas na tabela especificada ou em uma tabela definida por uma expressão.
   - __UNICHAR(number)__:Retorna o caractere Unicode referenciado pelo valor numérico.   
