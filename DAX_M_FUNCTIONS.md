@@ -49,8 +49,8 @@
     Table.Distinct(table as table, optional equationCriteria as any) as table
   ```
   - __Table.replace:__
-    ```
-  Text.Replace("the quick brown fox jumps over the lazy dog", "the", "a")
+   ```
+  Text.Replace(the quick brown fox jumps over the lazy dog, the, a)
    ```
   - __Table.ReplaceMatchingRows__
   - __Table.RenameColumns__
