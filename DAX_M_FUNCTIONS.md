@@ -52,7 +52,21 @@
    ```
   Text.Replace(the quick brown fox jumps over the lazy dog, the, a)
    ```
-  - __Table.ReplaceMatchingRows__
+  - __Table.ReplaceMatchingRows__Substitui todas as linhas especificadas na table pelas linhas fornecidas. As linhas a serem substituídas e as substituições são especificadas em replacements, usando a formatação {old, new}. 
+  ```
+    Table.ReplaceMatchingRows(
+    Table.FromRecords({
+        [a = 1, b = 2],
+        [a = 2, b = 3],
+        [a = 3, b = 4],
+        [a = 1, b = 2]
+    }),
+    {
+        {[a = 1, b = 2], [a = -1, b = -2]},
+        {[a = 2, b = 3], [a = -2, b = -3]}
+    }
+)
+  ```
   - __Table.RenameColumns__
   - Replaced Errors = 
   ```Table.ReplaceErrorValues(#"Changed Type", {{"Customer Key", 0}}) in #"Replaced Errors"
@@ -68,3 +82,4 @@
     "en-US"
 )
  ```
+ - __Table.FromRecords__ converte records (lista de registros), em uma tabela; 
