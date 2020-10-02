@@ -52,9 +52,9 @@
   - Table.RenameColumns
   - Replaced Errors = 
   ```Table.ReplaceErrorValues(#"Changed Type", {{"Customer Key", 0}}) __in #"Replaced Errors"__```
-  - __Table.TransformRows(<table>, <função de transformação>)__ as list/record: cria uma tabela com base em table, utilizando a função de transformação
-  -
-  ```__Table.TransformColumnTypes__(
+  - __Table.TransformRows(Table, função de transformação)__ as list/record: cria uma tabela com base em table, utilizando a função de transformação
+  - __Table.TransformColumnTypes__
+  ```Table.TransformColumnTypes(
     Table.FromRecords({
         [a = 1, b = 2],
         [a = 3, b = 4]
