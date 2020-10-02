@@ -44,14 +44,19 @@
  - __SAMEPERIODLASTYEAR()__:mesmo periodo no ultimo ano.Parâmetro: DATA
  - __DATEADD()__: DATEADD(<dates>,<1, 2, 3>,<DIA, MES, ANO>)  
  ### M Language
-  - Table.distinct:
-  - Table.replace
-  - Table.ReplaceMatchingRows
-  - Table.RemoveMatchingRows
-  - Table.RemoveColumns
-  - Table.RenameColumns
+  - __Table.distinct:__ remove as linhas duplicadas da tabelas. Um parâmetro opcional especifica quais colunas da tabela são testadas para duplicação. 
+  ```
+    Table.Distinct(table as table, optional equationCriteria as any) as table
+  ```
+  - __Table.replace:__
+    ```
+  Text.Replace("the quick brown fox jumps over the lazy dog", "the", "a")
+   ```
+  - __Table.ReplaceMatchingRows__
+  - __Table.RenameColumns__
   - Replaced Errors = 
-  ```Table.ReplaceErrorValues(#"Changed Type", {{"Customer Key", 0}}) __in #"Replaced Errors"__```
+  ```Table.ReplaceErrorValues(#"Changed Type", {{"Customer Key", 0}}) in #"Replaced Errors"
+  ```
   - __Table.TransformRows(Table, função de transformação)__ as list/record: cria uma tabela com base em table, utilizando a função de transformação
   - __Table.TransformColumnTypes__
   ```Table.TransformColumnTypes(
