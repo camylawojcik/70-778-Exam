@@ -21,6 +21,11 @@
   - __COUNTX(table,expression):__ Conta o número de linhas que contêm um valor que não esteja em branco ou uma expressão que é avaliada como um valor que não esteja em branco, ao avaliar uma expressão em uma tabela. Não trabalha com expressões booleanas. 
   - __COUNTROWS(table):__ A função COUNTROWS conta o número de linhas na tabela especificada ou em uma tabela definida por uma expressão.
   - __UNICHAR(number)__:Retorna o caractere Unicode referenciado pelo valor numérico.   
+  - __ROLLUP__: Modifica o comportamento da função SUMMARIZE adicionando linhas de valores acumulados ao resultado nas colunas definidas pelo parâmetro groupBy_columnName. Essa função pode ser usada apenas dentro de uma expressão SUMMARIZE.
+  ```
+  SUMMARIZE(<table>, <groupBy_columnName>[, <groupBy_columnName>]…[, ROLLUP(<groupBy_columnName>[,< groupBy_columnName>…])][, <name>, <expression>]…)
+  ```
+  
  #### Time Intelligence
   - __CALENDAR()__: você consegue setar a data de inicio e fim;
     - _MONTH, YEAR, STARTOFMONTH_
