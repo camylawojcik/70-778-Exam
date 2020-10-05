@@ -9,8 +9,8 @@
   - __REMOVEFILTERS()__: Remove filtros de tabela ou coluna
   - __FILTER__: FILTER(TABELA, expressão booleana)
   - __ALLCROSSFILTERED(<table>)__: remove todos os filtros da tabela
-  - __KEEPFILTER__
-  - __DIVIDE()__
+  - __KEEPFILTER__: Use KEEPFILTERS nas funções de contexto CALCULATE e CALCULATETABLE, para substituir o comportamento padrão dessas funções.
+  - __DIVIDE()__:DIVIDE(numerator, denominator [,alternateresult])
   - __ISINSCOPE():__ usada para testar se uma coluna é o nível em uma hierarquia de niveis
   - __CONTAINS__(table, columnName, value[, columnName, value]…)
   - __COUNTAX__: O exemplo a seguir conta o número de linhas que não estão em branco na coluna Phone usando a tabela resultante da filtragem da tabela 
@@ -26,11 +26,12 @@
     - _MONTH, YEAR, STARTOFMONTH_
     - _EOMONTH_: End of month
   - __CALENDARAUTO()__: Identifica automaticamente o inicio e o fim do range de datas;
-  - __TOTALYTD__:
-  - __PREVIOUSMONTH__:
-  - __PREVIOUSYEAR()__: 
+  - __TOTALYTD__: TOTALYTD(SUM(InternetSales_USD[SalesAmount_USD]),DateTime[DateKey])
+  - __PREVIOUSMONTH__: Retorna uma tabela que contém uma coluna de todas as datas do mês anterior, com base na primeira data na coluna dates, no contexto atual.
+  - __PREVIOUSYEAR()__: Retorna uma tabela que contém uma coluna de todas as datas do ano anterior, com base na primeira data na coluna dates, no contexto atual.
   - __PARALLELPERIOD():__ Desloca mêses/anos/dias para trás de cada data no contexto do filtro
-  - __DATESYTD__:
+  - __DATESYTD__: Retorna uma tabela que contém uma coluna das datas do ano até a data, no contexto atual.
+  - __DATESQTD__: Retorna uma tabela que contém uma coluna das datas do trimestre até a data, no contexto atual.
   ```CALCULATE ( 
                   SUM ( Vendas[Total Venda] );
                     FILTER (
